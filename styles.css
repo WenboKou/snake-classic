@@ -1,0 +1,143 @@
+:root {
+  --bg: #f3f1eb;
+  --panel: #fffdf8;
+  --border: #c9c1b2;
+  --text: #27231d;
+  --muted: #6c6457;
+  --snake: #2f6b3b;
+  --snake-head: #1f4a28;
+  --food: #c94f3d;
+  --cell: #ebe5d8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.panel {
+  width: min(100%, 560px);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 20px;
+}
+
+.hud,
+.actions,
+.touch-row {
+  display: flex;
+  gap: 12px;
+}
+
+.hud {
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.label {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.value {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.actions {
+  margin-bottom: 16px;
+}
+
+button {
+  border: 1px solid var(--border);
+  background: #f7f3ea;
+  color: var(--text);
+  padding: 10px 14px;
+  cursor: pointer;
+  font: inherit;
+}
+
+button:hover {
+  background: #efe8dc;
+}
+
+.board-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  gap: 2px;
+  width: min(100vw - 72px, 512px);
+  aspect-ratio: 1;
+  padding: 2px;
+  background: var(--border);
+}
+
+.cell {
+  background: var(--cell);
+}
+
+.cell.snake {
+  background: var(--snake);
+}
+
+.cell.head {
+  background: var(--snake-head);
+}
+
+.cell.food {
+  background: var(--food);
+}
+
+.instructions {
+  margin: 16px 0 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.touch-controls {
+  display: none;
+  margin-top: 16px;
+  gap: 10px;
+}
+
+.touch-controls,
+.touch-controls .touch-row {
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .panel {
+    padding: 16px;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+
+  .touch-controls {
+    display: flex;
+  }
+}

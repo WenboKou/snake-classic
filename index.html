@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Snake</title>
+  <meta name="description" content="Play a classic Snake game in your browser with keyboard or touch controls.">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./src/game-logic.js" defer></script>
+  <script src="./src/app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <section class="panel">
+      <div class="hud">
+        <div>
+          <p class="label">Score</p>
+          <p id="score" class="value">0</p>
+        </div>
+        <div>
+          <p class="label">Status</p>
+          <p id="status" class="value">Ready</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="start-button" type="button">Start</button>
+        <button id="pause-button" type="button">Pause</button>
+        <button id="restart-button" type="button">Restart</button>
+      </div>
+
+      <div class="board-wrap">
+        <div id="board" class="board" aria-label="Snake game board" role="grid"></div>
+      </div>
+
+      <p class="instructions">
+        Use arrow keys or WASD to move. Eat food to grow. Avoid walls and your own tail.
+      </p>
+
+      <div class="touch-controls" aria-label="On-screen controls">
+        <button data-direction="up" type="button">Up</button>
+        <div class="touch-row">
+          <button data-direction="left" type="button">Left</button>
+          <button data-direction="down" type="button">Down</button>
+          <button data-direction="right" type="button">Right</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

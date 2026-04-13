@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Snake icon">
+  <rect width="64" height="64" rx="12" fill="#f3f1eb"/>
+  <path d="M16 22h10v10H16zm11 0h10v10H27zm11 0h10v10H38zM38 33h10v10H38zM27 33h10v10H27z" fill="#2f6b3b"/>
+  <circle cx="45" cy="27" r="2" fill="#fffdf8"/>
+  <circle cx="50" cy="41" r="5" fill="#c94f3d"/>
+</svg>
